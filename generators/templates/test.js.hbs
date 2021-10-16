@@ -1,0 +1,38 @@
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+
+import { {{pascalCase name}} } from '.'
+
+describe('<{{pascalCase name}} />', () => {
+  it('should render the heading', () => {
+    render(<{{pascalCase name}} />)
+
+    expect(screen.getByRole('heading', { name: /{{pascalCase name}}/i })).toBeInTheDocument()
+
+  })
+
+  /*
+    it('should render without any marker', () => {
+      render(<{{pascalCase name}} />)
+
+      // Gera um link para o playground de teste
+      screen.logTestingPlaygroundURL()
+
+    })
+  */
+
+  /*
+    it('should render debug HTML', () => {
+      const { debug } = render(<{{pascalCase name}} />)
+      debug()
+    })
+  */
+
+  /*
+    it('created Snapshot', () => {
+    const { container } = render(<{{pascalCase name}} />)
+    expect(container.firstChild).toMatchSnapshot()
+   })
+  */
+
+})
